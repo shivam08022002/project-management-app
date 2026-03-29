@@ -18,7 +18,8 @@ connectDB().catch(err => console.error('Database connection error:', err));
 
 const allowedOrigins = [
   'http://localhost:5173',
-  process.env.FRONTEND_URL, // e.g., your-frontend-name.vercel.app
+  'https://project-management-app-ep1u.vercel.app',
+  process.env.FRONTEND_URL, 
 ].filter(Boolean);
 
 if (process.env.NODE_ENV === 'development') {
@@ -29,9 +30,12 @@ app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV === 'production') {
+    
+    // Check if origin is in allowed list
+    if (allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
+      console.warn(`CORS blocked for origin: ${origin}`);
       callback(new Error('Not allowed by CORS'));
     }
   },
