@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Configure Axios Instance
 const API_URL = import.meta.env.PROD 
-  ? 'https://project-management-app-784j.vercel.app/api' 
+  ? 'https://project-management-app-784j-pwi1k1vd1-exchange-247.vercel.app/' 
+  
   : 'http://localhost:8000/api';
 
 const api = axios.create({
