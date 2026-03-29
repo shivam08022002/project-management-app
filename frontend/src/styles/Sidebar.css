@@ -1,0 +1,323 @@
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 0;
+}
+
+/* -- Brand / Logo -- */
+.sidebar-brand {
+  padding: 24px 20px 20px;
+}
+
+
+
+
+/* -- Global Nav -- */
+.sidebar-global-nav {
+  padding: 0 16px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-nav-item:hover,
+.sidebar-nav-item.active {
+  background: var(--bg-hover);
+  color: var(--accent-cyan);
+}
+
+/* -- Project Selector -- */
+.sidebar-project-selector {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-project-dropdown {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* -- Projects List -- */
+.sidebar-section {
+  padding: 12px 16px;
+}
+
+.sidebar-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
+}
+
+.sidebar-project-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-project-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  color: var(--text-secondary);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.sidebar-project-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.sidebar-project-item.active {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.sidebar-project-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--accent-cyan);
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* -- Create Project Button -- */
+.sidebar-create-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  background: var(--accent-cyan);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.sidebar-create-btn:hover {
+  background: var(--accent-cyan-hover);
+}
+
+/* -- New Board Button -- */
+.sidebar-board-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-board-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* -- Team Section -- */
+.sidebar-team {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.sidebar-team-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sidebar-team-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-primary);
+}
+
+.sidebar-team-count {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.sidebar-team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-team-member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-team-member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-team-member-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.sidebar-team-member-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* -- Add User Input -- */
+.sidebar-add-user {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar-add-user input {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.sidebar-add-user-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.sidebar-add-user-actions button {
+  padding: 6px 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+}
+
+.sidebar-add-user-actions .btn-send {
+  background: var(--accent-cyan);
+  color: #ffffff;
+}
+
+.sidebar-add-user-actions .btn-send:hover {
+  background: var(--accent-cyan-hover);
+}
+
+/* -- Logout -- */
+.sidebar-logout {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  color: var(--accent-red);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-logout-btn:hover {
+  background: rgba(244, 67, 54, 0.1);
+}
+
+/* -- Sidebar Board Input Modal -- */
+.sidebar-board-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.sidebar-board-input input {
+  padding: 8px 10px;
+  font-size: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.sidebar-board-input-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.sidebar-board-input-actions .btn {
+  flex: 1;
+  font-size: 11px;
+  padding: 6px;
+}
