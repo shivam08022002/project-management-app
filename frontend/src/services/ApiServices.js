@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 // Configure Axios Instance
-const API_URL = import.meta.env.PROD 
-  ? 'https://project-management-app-784j.vercel.app/api' 
-  : 'http://localhost:8000/api';
+const API_URL = 'https://proxima-5luj.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_URL,
